@@ -1,0 +1,126 @@
+\doxysection{lib.\+cpp File Reference}
+\label{lib_8cpp}\index{lib.cpp@{lib.cpp}}
+{\ttfamily \#include "{}lib.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \textbf{ operator$<$$<$} (std\+::ostream \&os, const \textbf{ Value} \&vall)
+\begin{DoxyCompactList}\small\item\em Overloaded stream insertion operator to output a Value object to an output stream. \end{DoxyCompactList}\item 
+void \textbf{ write\+To\+The\+File} (const std\+::string \&file\+Name, std\+::vector$<$ \textbf{ Account} $>$ \&accounts)
+\begin{DoxyCompactList}\small\item\em Writes account information to a file, compresses it using \doxyref{Huffman}{p.}{class_huffman} coding, and deletes the temporary file. \end{DoxyCompactList}\item 
+void \textbf{ load\+From\+File} (const std\+::string \&filename, std\+::vector$<$ \textbf{ Account} $>$ \&acounts)
+\begin{DoxyCompactList}\small\item\em Loads account data from a file and populates a vector of \doxyref{Account}{p.}{class_account} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\label{lib_8cpp_afe947d92d0bb00fbc2dc493459702a7a} 
+\index{lib.cpp@{lib.cpp}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!lib.cpp@{lib.cpp}}
+\doxysubsubsection{loadFromFile()}
+{\footnotesize\ttfamily void load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{std\+::vector$<$ \textbf{ Account} $>$ \&}]{acounts }\end{DoxyParamCaption})}
+
+
+
+Loads account data from a file and populates a vector of \doxyref{Account}{p.}{class_account} objects. 
+
+Loads account data from a file.
+
+This function reads data from a file containing account information in a specific format. It parses the data and creates \doxyref{Account}{p.}{class_account} objects, populating them with the parsed information, and then adds these \doxyref{Account}{p.}{class_account} objects to the provided vector. It decompresses the file by using \doxyref{Huffman}{p.}{class_huffman} coding and deletes the temporary file after decompression.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file from which to load account data. \\
+\hline
+{\em accounts} & A vector of \doxyref{Account}{p.}{class_account} objects where the loaded data will be stored. \\
+\hline
+\end{DoxyParams}
+!!!!!
+
+!!!!!\label{lib_8cpp_a646fffc6b6f6a2e688ee8d32427b4bdb} 
+\index{lib.cpp@{lib.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!lib.cpp@{lib.cpp}}
+\doxysubsubsection{operator$<$$<$()}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \textbf{ Value} \&}]{vall }\end{DoxyParamCaption})}
+
+
+
+Overloaded stream insertion operator to output a Value object to an output stream. 
+
+This operator allows printing a Value object to an output stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the Value object will be printed. \\
+\hline
+{\em vall} & The Value object to be printed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& The reference to the output stream. 
+\end{DoxyReturn}
+Lambda function to output an \doxyref{Account}{p.}{class_account} object.
+
+This lambda function outputs the details of an \doxyref{Account}{p.}{class_account} object to the provided output stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em acc} & The \doxyref{Account}{p.}{class_account} object to be printed.\\
+\hline
+\end{DoxyParams}
+Lambda function to output a \doxyref{Date}{p.}{class_date} object.
+
+This lambda function outputs the date details to the provided output stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & The \doxyref{Date}{p.}{class_date} object to be printed.\\
+\hline
+\end{DoxyParams}
+Lambda function to output a \doxyref{Target}{p.}{class_target} object.
+
+This lambda function outputs the details of a \doxyref{Target}{p.}{class_target} object to the provided output stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The \doxyref{Target}{p.}{class_target} object to be printed.\\
+\hline
+\end{DoxyParams}
+Lambda function to output an \doxyref{Owner}{p.}{class_owner} object.
+
+This lambda function outputs the details of an \doxyref{Owner}{p.}{class_owner} object to the provided output stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & The \doxyref{Owner}{p.}{class_owner} object to be printed.\\
+\hline
+\end{DoxyParams}
+Lambda function to output a \doxyref{Payment}{p.}{class_payment} object.
+
+This lambda function outputs the details of a \doxyref{Payment}{p.}{class_payment} object to the provided output stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em payment} & The \doxyref{Payment}{p.}{class_payment} object to be printed.\\
+\hline
+\end{DoxyParams}
+\label{lib_8cpp_a8430ef0c47ee23533025a36a3e75431e} 
+\index{lib.cpp@{lib.cpp}!writeToTheFile@{writeToTheFile}}
+\index{writeToTheFile@{writeToTheFile}!lib.cpp@{lib.cpp}}
+\doxysubsubsection{writeToTheFile()}
+{\footnotesize\ttfamily void write\+To\+The\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{std\+::vector$<$ \textbf{ Account} $>$ \&}]{accounts }\end{DoxyParamCaption})}
+
+
+
+Writes account information to a file, compresses it using \doxyref{Huffman}{p.}{class_huffman} coding, and deletes the temporary file. 
+
+Writes account data to a file.
+
+This function writes account information to a file specified by file\+Name, then compresses the file using \doxyref{Huffman}{p.}{class_huffman} coding and deletes the temporary file after compression.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file to write the account information to. \\
+\hline
+{\em accounts} & A vector of \doxyref{Account}{p.}{class_account} objects containing the account information to be written to the file. \\
+\hline
+\end{DoxyParams}

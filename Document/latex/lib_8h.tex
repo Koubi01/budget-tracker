@@ -1,0 +1,232 @@
+\doxysection{lib.\+h File Reference}
+\label{lib_8h}\index{lib.h@{lib.h}}
+
+
+Contains the implementation of a financial management system.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$variant$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include "{}Huff.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ overloaded$<$ Ts $>$}
+\begin{DoxyCompactList}\small\item\em Visitor for printing a Value to an output stream. \end{DoxyCompactList}\item 
+class \textbf{ Date}
+\begin{DoxyCompactList}\small\item\em Represents a date with day, month, and year components. \end{DoxyCompactList}\item 
+class \textbf{ Target}
+\begin{DoxyCompactList}\small\item\em Represents a financial target with a name, limit, target date, and amount. \end{DoxyCompactList}\item 
+class \textbf{ Payment}
+\begin{DoxyCompactList}\small\item\em Represents a financial payment with a name, amount, type, and date. \end{DoxyCompactList}\item 
+class \textbf{ Owner}
+\begin{DoxyCompactList}\small\item\em Represents an account owner with a name, address, and phone number. \end{DoxyCompactList}\item 
+class \textbf{ Account}
+\begin{DoxyCompactList}\small\item\em Represents a financial account with various properties and functionalities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \textbf{ Value} = std\+::variant$<$\textbf{ Date}, \textbf{ Target}, \textbf{ Payment}, \textbf{ Owner}, \textbf{ Account}$>$
+\begin{DoxyCompactList}\small\item\em Alias for a variant type that can hold \doxyref{Date}{p.}{class_date}, \doxyref{Target}{p.}{class_target}, \doxyref{Payment}{p.}{class_payment}, \doxyref{Owner}{p.}{class_owner}, or \doxyref{Account}{p.}{class_account}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ Payment\+\_\+type} \{ \textbf{ incomes}
+, \textbf{ expens}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum representing the type of payment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ load\+From\+File} (const std\+::string \&filename, std\+::vector$<$ \textbf{ Account} $>$ \&accounts)
+\begin{DoxyCompactList}\small\item\em Loads account data from a file. \end{DoxyCompactList}\item 
+void \textbf{ write\+To\+The\+File} (const std\+::string \&file\+Name, std\+::vector$<$ \textbf{ Account} $>$ \&accounts)
+\begin{DoxyCompactList}\small\item\em Writes account data to a file. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class... Ts$>$ }\\\textbf{ overloaded} (Ts...) -\/$>$ overloaded$<$ Ts... $>$
+\item 
+std\+::ostream \& \textbf{ operator$<$$<$} (std\+::ostream \&os, const \textbf{ Value} \&value)
+\begin{DoxyCompactList}\small\item\em Overloaded stream insertion operator to output a Value object to an output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the implementation of a financial management system. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\label{lib_8h_a733b9671008ed6a60c840caf8bead1c9} 
+\index{lib.h@{lib.h}!Value@{Value}}
+\index{Value@{Value}!lib.h@{lib.h}}
+\doxysubsubsection{Value}
+{\footnotesize\ttfamily using \textbf{ Value} = std\+::variant$<$\textbf{ Date}, \textbf{ Target}, \textbf{ Payment}, \textbf{ Owner}, \textbf{ Account}$>$}
+
+
+
+Alias for a variant type that can hold \doxyref{Date}{p.}{class_date}, \doxyref{Target}{p.}{class_target}, \doxyref{Payment}{p.}{class_payment}, \doxyref{Owner}{p.}{class_owner}, or \doxyref{Account}{p.}{class_account}. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\label{lib_8h_ae9e6cca808306101b5ba2881b2c1dfc5} 
+\index{lib.h@{lib.h}!Payment\_type@{Payment\_type}}
+\index{Payment\_type@{Payment\_type}!lib.h@{lib.h}}
+\doxysubsubsection{Payment\_type}
+{\footnotesize\ttfamily enum \textbf{ Payment\+\_\+type}}
+
+
+
+Enum representing the type of payment. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{incomes@{incomes}!lib.h@{lib.h}}\index{lib.h@{lib.h}!incomes@{incomes}}}\label{lib_8h_ae9e6cca808306101b5ba2881b2c1dfc5a4ab48e4dc771405cc12cba2f56ad473f} 
+incomes&Income payment type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{expens@{expens}!lib.h@{lib.h}}\index{lib.h@{lib.h}!expens@{expens}}}\label{lib_8h_ae9e6cca808306101b5ba2881b2c1dfc5a395e2fc0e0379abec12fac8b3d1a265b} 
+expens&Expense payment type. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\label{lib_8h_a3c8e4a3daab55028399044b5c76f1486} 
+\index{lib.h@{lib.h}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!lib.h@{lib.h}}
+\doxysubsubsection{loadFromFile()}
+{\footnotesize\ttfamily void load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{std\+::vector$<$ \textbf{ Account} $>$ \&}]{acounts }\end{DoxyParamCaption})}
+
+
+
+Loads account data from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to load data from. \\
+\hline
+{\em accounts} & Reference to the vector to store loaded account data.\\
+\hline
+\end{DoxyParams}
+Loads account data from a file.
+
+This function reads data from a file containing account information in a specific format. It parses the data and creates \doxyref{Account}{p.}{class_account} objects, populating them with the parsed information, and then adds these \doxyref{Account}{p.}{class_account} objects to the provided vector. It decompresses the file by using \doxyref{Huffman}{p.}{class_huffman} coding and deletes the temporary file after decompression.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file from which to load account data. \\
+\hline
+{\em accounts} & A vector of \doxyref{Account}{p.}{class_account} objects where the loaded data will be stored. \\
+\hline
+\end{DoxyParams}
+!!!!!
+
+!!!!!\label{lib_8h_ab60b5e8952393204654fd00b21a7a8a5} 
+\index{lib.h@{lib.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!lib.h@{lib.h}}
+\doxysubsubsection{operator$<$$<$()}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \textbf{ Value} \&}]{vall }\end{DoxyParamCaption})}
+
+
+
+Overloaded stream insertion operator to output a Value object to an output stream. 
+
+This operator allows printing a Value object to an output stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the Value object will be printed. \\
+\hline
+{\em vall} & The Value object to be printed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& The reference to the output stream. 
+\end{DoxyReturn}
+Lambda function to output an \doxyref{Account}{p.}{class_account} object.
+
+This lambda function outputs the details of an \doxyref{Account}{p.}{class_account} object to the provided output stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em acc} & The \doxyref{Account}{p.}{class_account} object to be printed.\\
+\hline
+\end{DoxyParams}
+Lambda function to output a \doxyref{Date}{p.}{class_date} object.
+
+This lambda function outputs the date details to the provided output stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & The \doxyref{Date}{p.}{class_date} object to be printed.\\
+\hline
+\end{DoxyParams}
+Lambda function to output a \doxyref{Target}{p.}{class_target} object.
+
+This lambda function outputs the details of a \doxyref{Target}{p.}{class_target} object to the provided output stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The \doxyref{Target}{p.}{class_target} object to be printed.\\
+\hline
+\end{DoxyParams}
+Lambda function to output an \doxyref{Owner}{p.}{class_owner} object.
+
+This lambda function outputs the details of an \doxyref{Owner}{p.}{class_owner} object to the provided output stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & The \doxyref{Owner}{p.}{class_owner} object to be printed.\\
+\hline
+\end{DoxyParams}
+Lambda function to output a \doxyref{Payment}{p.}{class_payment} object.
+
+This lambda function outputs the details of a \doxyref{Payment}{p.}{class_payment} object to the provided output stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em payment} & The \doxyref{Payment}{p.}{class_payment} object to be printed.\\
+\hline
+\end{DoxyParams}
+\label{lib_8h_a0930706ccdcce4d25d36c7c80ecacb4f} 
+\index{lib.h@{lib.h}!overloaded@{overloaded}}
+\index{overloaded@{overloaded}!lib.h@{lib.h}}
+\doxysubsubsection{overloaded()}
+{\footnotesize\ttfamily template$<$class... Ts$>$ \\
+overloaded (\begin{DoxyParamCaption}\item[{Ts...}]{ }\end{DoxyParamCaption}) -\/$>$  overloaded$<$ Ts... $>$}
+
+\label{lib_8h_a8430ef0c47ee23533025a36a3e75431e} 
+\index{lib.h@{lib.h}!writeToTheFile@{writeToTheFile}}
+\index{writeToTheFile@{writeToTheFile}!lib.h@{lib.h}}
+\doxysubsubsection{writeToTheFile()}
+{\footnotesize\ttfamily void write\+To\+The\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{std\+::vector$<$ \textbf{ Account} $>$ \&}]{accounts }\end{DoxyParamCaption})}
+
+
+
+Writes account data to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file to write data to. \\
+\hline
+{\em accounts} & Reference to the vector containing account data to write.\\
+\hline
+\end{DoxyParams}
+Writes account data to a file.
+
+This function writes account information to a file specified by file\+Name, then compresses the file using \doxyref{Huffman}{p.}{class_huffman} coding and deletes the temporary file after compression.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file to write the account information to. \\
+\hline
+{\em accounts} & A vector of \doxyref{Account}{p.}{class_account} objects containing the account information to be written to the file. \\
+\hline
+\end{DoxyParams}

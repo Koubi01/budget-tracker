@@ -1,0 +1,264 @@
+\doxysection{Target Class Reference}
+\label{class_target}\index{Target@{Target}}
+
+
+Represents a financial target with a name, limit, target date, and amount.  
+
+
+
+
+{\ttfamily \#include $<$lib.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Target} (std\+::string name, double lmt, \textbf{ Date} target\+\_\+dat, double Amnt)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Getter for the target name. \end{DoxyCompactList}\item 
+double \textbf{ get\+Limit} () const
+\begin{DoxyCompactList}\small\item\em Getter for the target limit. \end{DoxyCompactList}\item 
+\textbf{ Date} \textbf{ get\+Date} () const
+\begin{DoxyCompactList}\small\item\em Getter for the target date. \end{DoxyCompactList}\item 
+void \textbf{ set\+Target\+Date} (\textbf{ Date} New\+Date)
+\begin{DoxyCompactList}\small\item\em Setter for the target date. \end{DoxyCompactList}\item 
+void \textbf{ set\+Taget\+Limit} (double limit)
+\begin{DoxyCompactList}\small\item\em Setter for the target limit. \end{DoxyCompactList}\item 
+void \textbf{ set\+Target\+Name} (std\+::string New\+Name)
+\begin{DoxyCompactList}\small\item\em Setter for the target name. \end{DoxyCompactList}\item 
+void \textbf{ set\+Target\+Amount} (double n)
+\begin{DoxyCompactList}\small\item\em Setter for the target amount. \end{DoxyCompactList}\item 
+double \textbf{ get\+Differences} ()
+\begin{DoxyCompactList}\small\item\em Calculates the difference between limit and amount. \end{DoxyCompactList}\item 
+double \textbf{ get\+Amount} () const
+\begin{DoxyCompactList}\small\item\em Getter for the target amount. \end{DoxyCompactList}\item 
+void \textbf{ add\+Amount} (double value)
+\begin{DoxyCompactList}\small\item\em Adds amount to the target. \end{DoxyCompactList}\item 
+bool \textbf{ reached} ()
+\begin{DoxyCompactList}\small\item\em Checks if the target has been reached. \end{DoxyCompactList}\item 
+std\+::string \textbf{ to\+String} ()
+\begin{DoxyCompactList}\small\item\em Converts target data to string format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a financial target with a name, limit, target date, and amount. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{class_target_a8fc089da601e7a2d123366bc170908fb} 
+\index{Target@{Target}!Target@{Target}}
+\index{Target@{Target}!Target@{Target}}
+\doxysubsubsection{Target()}
+{\footnotesize\ttfamily Target\+::\+Target (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{double}]{lmt,  }\item[{\textbf{ Date}}]{target\+\_\+dat,  }\item[{double}]{Amnt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the target. \\
+\hline
+{\em lmt} & Limit of the target. \\
+\hline
+{\em target\+\_\+dat} & \doxyref{Target}{p.}{class_target} date. \\
+\hline
+{\em Amnt} & Amount associated with the target. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_target_adda1d966726f82d5a2b3f17455a0f35c} 
+\index{Target@{Target}!addAmount@{addAmount}}
+\index{addAmount@{addAmount}!Target@{Target}}
+\doxysubsubsection{addAmount()}
+{\footnotesize\ttfamily void Target\+::add\+Amount (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+Adds amount to the target. 
+
+Adds a value to the current amount.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to be added to the current amount. \\
+\hline
+\end{DoxyParams}
+\label{class_target_a1f70c470178213d57fa4068bcf19e233} 
+\index{Target@{Target}!getAmount@{getAmount}}
+\index{getAmount@{getAmount}!Target@{Target}}
+\doxysubsubsection{getAmount()}
+{\footnotesize\ttfamily double Target\+::get\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the target amount. 
+
+Retrieves the current amount set for the target.
+
+\begin{DoxyReturn}{Returns}
+The current amount set for the target. 
+\end{DoxyReturn}
+\label{class_target_acfc18685cdd2e70e2c39c7df2b68dbbf} 
+\index{Target@{Target}!getDate@{getDate}}
+\index{getDate@{getDate}!Target@{Target}}
+\doxysubsubsection{getDate()}
+{\footnotesize\ttfamily \textbf{ Date} Target\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the target date. 
+
+Retrieves the target date.
+
+\begin{DoxyReturn}{Returns}
+The target date as a \doxyref{Date}{p.}{class_date} object. 
+\end{DoxyReturn}
+\label{class_target_aa0910f9cac07ede268a6d9baf9f57231} 
+\index{Target@{Target}!getDifferences@{getDifferences}}
+\index{getDifferences@{getDifferences}!Target@{Target}}
+\doxysubsubsection{getDifferences()}
+{\footnotesize\ttfamily double Target\+::get\+Differences (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the difference between limit and amount. 
+
+Calculates and retrieves the difference between the limit and the current amount.
+
+\begin{DoxyReturn}{Returns}
+The difference between the limit and the current amount. 
+\end{DoxyReturn}
+\label{class_target_a57c8aa5e40f1be1cc1a89305402e4ab7} 
+\index{Target@{Target}!getLimit@{getLimit}}
+\index{getLimit@{getLimit}!Target@{Target}}
+\doxysubsubsection{getLimit()}
+{\footnotesize\ttfamily double Target\+::get\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the target limit. 
+
+Retrieves the limit set for the target.
+
+\begin{DoxyReturn}{Returns}
+The limit set for the target. 
+\end{DoxyReturn}
+\label{class_target_afb7376b8e28017fd7bf78fdf64fb9140} 
+\index{Target@{Target}!getName@{getName}}
+\index{getName@{getName}!Target@{Target}}
+\doxysubsubsection{getName()}
+{\footnotesize\ttfamily std\+::string Target\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the target name. 
+
+Retrieves the name of the target.
+
+\begin{DoxyReturn}{Returns}
+The name of the target as a string. 
+\end{DoxyReturn}
+\label{class_target_a6a2e5b7f13c0675f0d26163d167b8a85} 
+\index{Target@{Target}!reached@{reached}}
+\index{reached@{reached}!Target@{Target}}
+\doxysubsubsection{reached()}
+{\footnotesize\ttfamily bool Target\+::reached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the target has been reached. 
+
+\begin{DoxyReturn}{Returns}
+True if the amount is greater than or equal to the limit, otherwise false. 
+\end{DoxyReturn}
+\label{class_target_a3ecc031a3d277b28b67ab8ec6614e61c} 
+\index{Target@{Target}!setTagetLimit@{setTagetLimit}}
+\index{setTagetLimit@{setTagetLimit}!Target@{Target}}
+\doxysubsubsection{setTagetLimit()}
+{\footnotesize\ttfamily void Target\+::set\+Taget\+Limit (\begin{DoxyParamCaption}\item[{double}]{limit }\end{DoxyParamCaption})}
+
+
+
+Setter for the target limit. 
+
+Sets a new limit for the target.
+
+
+\begin{DoxyParams}{Parameters}
+{\em limit} & The new limit for the target. \\
+\hline
+\end{DoxyParams}
+\label{class_target_aa43d3478fdadd5b74f07e29b24449488} 
+\index{Target@{Target}!setTargetAmount@{setTargetAmount}}
+\index{setTargetAmount@{setTargetAmount}!Target@{Target}}
+\doxysubsubsection{setTargetAmount()}
+{\footnotesize\ttfamily void Target\+::set\+Target\+Amount (\begin{DoxyParamCaption}\item[{double}]{n }\end{DoxyParamCaption})}
+
+
+
+Setter for the target amount. 
+
+Sets a new amount for the target.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The new amount for the target. \\
+\hline
+\end{DoxyParams}
+\label{class_target_a9ec6b76bc69b48bad6bad44eb95f87a1} 
+\index{Target@{Target}!setTargetDate@{setTargetDate}}
+\index{setTargetDate@{setTargetDate}!Target@{Target}}
+\doxysubsubsection{setTargetDate()}
+{\footnotesize\ttfamily void Target\+::set\+Target\+Date (\begin{DoxyParamCaption}\item[{\textbf{ Date}}]{New\+Date }\end{DoxyParamCaption})}
+
+
+
+Setter for the target date. 
+
+Sets a new target date.
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Date} & The new target date. \\
+\hline
+\end{DoxyParams}
+\label{class_target_a21cad21fb63deaea72be455af8ccbe53} 
+\index{Target@{Target}!setTargetName@{setTargetName}}
+\index{setTargetName@{setTargetName}!Target@{Target}}
+\doxysubsubsection{setTargetName()}
+{\footnotesize\ttfamily void Target\+::set\+Target\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{New\+Name }\end{DoxyParamCaption})}
+
+
+
+Setter for the target name. 
+
+Sets a new name for the target.
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Name} & The new name for the target. \\
+\hline
+\end{DoxyParams}
+\label{class_target_a0f1813c291fce560d86d6f59f0d030d8} 
+\index{Target@{Target}!toString@{toString}}
+\index{toString@{toString}!Target@{Target}}
+\doxysubsubsection{toString()}
+{\footnotesize\ttfamily std\+::string Target\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Converts target data to string format. 
+
+Converts the target information to a string format.
+
+\begin{DoxyReturn}{Returns}
+A string containing the target information in the format "{}name, date, limit"{}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ lib.\+h}\item 
+\textbf{ lib.\+cpp}\end{DoxyCompactItemize}

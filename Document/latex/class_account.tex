@@ -1,0 +1,705 @@
+\doxysection{Account Class Reference}
+\label{class_account}\index{Account@{Account}}
+
+
+Represents a financial account with various properties and functionalities.  
+
+
+
+
+{\ttfamily \#include $<$lib.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Account} (int acc\+Num, \textbf{ Date} date, \textbf{ Owner} own, double bal)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. \end{DoxyCompactList}\item 
+void \textbf{ set\+Owner\+Name} (std\+::string new\+Name)
+\begin{DoxyCompactList}\small\item\em Setter for the owner name. \end{DoxyCompactList}\item 
+void \textbf{ set\+Owner\+Adress} (std\+::string new\+Adress)
+\begin{DoxyCompactList}\small\item\em Setter for the owner address. \end{DoxyCompactList}\item 
+void \textbf{ set\+Owner\+Phone} (std\+::string new\+Phone)
+\begin{DoxyCompactList}\small\item\em Setter for the owner phone number. \end{DoxyCompactList}\item 
+int \textbf{ get\+Account\+Number} () const
+\begin{DoxyCompactList}\small\item\em Getter for the account number. \end{DoxyCompactList}\item 
+double \textbf{ get\+Balance} () const
+\begin{DoxyCompactList}\small\item\em Getter for the account balance. \end{DoxyCompactList}\item 
+\textbf{ Date} \textbf{ get\+Date\+Of\+Assebly} () const
+\begin{DoxyCompactList}\small\item\em Getter for the date of account assembly. \end{DoxyCompactList}\item 
+\textbf{ Owner} \textbf{ get\+Owner} () const
+\begin{DoxyCompactList}\small\item\em Getter for the account owner. \end{DoxyCompactList}\item 
+int \textbf{ number\+Of\+Part\+Owners} () const
+\begin{DoxyCompactList}\small\item\em Getter for the number of part owners. \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ Owner} $>$ \textbf{ get\+Part\+Owners} () const
+\begin{DoxyCompactList}\small\item\em Getter for the part owners. \end{DoxyCompactList}\item 
+int \textbf{ number\+Of\+Targets} ()
+\begin{DoxyCompactList}\small\item\em Getter for the number of targets. \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ Target} $>$ \textbf{ get\+Targets} () const
+\begin{DoxyCompactList}\small\item\em Getter for the targets. \end{DoxyCompactList}\item 
+int \textbf{ number\+Of\+Monthly\+Payments} () const
+\begin{DoxyCompactList}\small\item\em Getter for the number of monthly payments. \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ Payment} $>$ \textbf{ get\+Montly\+Pays} () const
+\begin{DoxyCompactList}\small\item\em Getter for the monthly payments. \end{DoxyCompactList}\item 
+int \textbf{ number\+Of\+Payments} () const
+\begin{DoxyCompactList}\small\item\em Getter for the number of payments. \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ Payment} $>$ \textbf{ get\+Payments} () const
+\begin{DoxyCompactList}\small\item\em Getter for the payments. \end{DoxyCompactList}\item 
+int \textbf{ number\+Of\+Incomes} () const
+\begin{DoxyCompactList}\small\item\em Getter for the number of incomes. \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ Payment} $>$ \textbf{ get\+Incomes} () const
+\begin{DoxyCompactList}\small\item\em Getter for the incomes. \end{DoxyCompactList}\item 
+void \textbf{ add\+Part\+Owner} (\textbf{ Owner} part\+\_\+owner)
+\begin{DoxyCompactList}\small\item\em Adds a part owner to the account. \end{DoxyCompactList}\item 
+void \textbf{ add\+Targets} (\textbf{ Target} target)
+\begin{DoxyCompactList}\small\item\em Adds a target to the account. \end{DoxyCompactList}\item 
+void \textbf{ add\+Payment} (\textbf{ Payment} pay)
+\begin{DoxyCompactList}\small\item\em Adds a payment to the account. \end{DoxyCompactList}\item 
+void \textbf{ add\+Monthly\+Pays} (\textbf{ Payment} monthly\+\_\+payments)
+\begin{DoxyCompactList}\small\item\em Adds a monthly payment to the account. \end{DoxyCompactList}\item 
+void \textbf{ add\+Funds} (\textbf{ Payment} fund)
+\begin{DoxyCompactList}\small\item\em Adds funds to the account. \end{DoxyCompactList}\item 
+void \textbf{ add\+Target\+Fund} (std\+::string name, double Amount)
+\begin{DoxyCompactList}\small\item\em Adds funds to a target. \end{DoxyCompactList}\item 
+void \textbf{ print\+Monthly} ()
+\begin{DoxyCompactList}\small\item\em Prints monthly payments. \end{DoxyCompactList}\item 
+void \textbf{ print\+Payments} ()
+\begin{DoxyCompactList}\small\item\em Prints all payments. \end{DoxyCompactList}\item 
+void \textbf{ print\+Targets} ()
+\begin{DoxyCompactList}\small\item\em Prints all targets. \end{DoxyCompactList}\item 
+void \textbf{ print\+Incomes} ()
+\begin{DoxyCompactList}\small\item\em Prints all incomes. \end{DoxyCompactList}\item 
+void \textbf{ print\+Part\+Owners} ()
+\begin{DoxyCompactList}\small\item\em Prints all part owners. \end{DoxyCompactList}\item 
+void \textbf{ remove\+Target} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Removes a target. \end{DoxyCompactList}\item 
+void \textbf{ remove\+Part\+Owner} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Removes a part owner. \end{DoxyCompactList}\item 
+void \textbf{ print\+Information\+Account} ()
+\begin{DoxyCompactList}\small\item\em Prints account information. \end{DoxyCompactList}\item 
+void \textbf{ months\+To\+Target} (std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::pair$<$ int, bool $>$ $>$ $>$ \&months\+Remaining, const std\+::string \&target\+Name)
+\begin{DoxyCompactList}\small\item\em Calculates months remaining to reach a target. \end{DoxyCompactList}\item 
+void \textbf{ pretty\+Print\+Account} ()
+\begin{DoxyCompactList}\small\item\em Prints account details in a formatted manner. \end{DoxyCompactList}\item 
+double \textbf{ calculate\+Total\+Expenses} ()
+\begin{DoxyCompactList}\small\item\em Calculates total expenses. \end{DoxyCompactList}\item 
+double \textbf{ calculate\+Total\+Income} ()
+\begin{DoxyCompactList}\small\item\em Calculates total income. \end{DoxyCompactList}\item 
+void \textbf{ generate\+Spending\+Habits\+Report} ()
+\begin{DoxyCompactList}\small\item\em Generates spending habits report. \end{DoxyCompactList}\item 
+std\+::string \textbf{ generate\+Spending\+Habits\+Report\+Json} ()
+\begin{DoxyCompactList}\small\item\em Generates spending habits report in JSON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a financial account with various properties and functionalities. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{class_account_a2575e6dbd3364f6abf69dc4dd3fc1993} 
+\index{Account@{Account}!Account@{Account}}
+\index{Account@{Account}!Account@{Account}}
+\doxysubsubsection{Account()}
+{\footnotesize\ttfamily Account\+::\+Account (\begin{DoxyParamCaption}\item[{int}]{acc\+Num,  }\item[{\textbf{ Date}}]{date,  }\item[{\textbf{ Owner}}]{own,  }\item[{double}]{bal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em acc\+Num} & \doxyref{Account}{p.}{class_account} number. \\
+\hline
+{\em date} & \doxyref{Date}{p.}{class_date} of account assembly. \\
+\hline
+{\em own} & \doxyref{Owner}{p.}{class_owner} of the account. \\
+\hline
+{\em bal} & Balance of the account. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_account_a8b559f06871af2fa26fcfdfadf146bf9} 
+\index{Account@{Account}!addFunds@{addFunds}}
+\index{addFunds@{addFunds}!Account@{Account}}
+\doxysubsubsection{addFunds()}
+{\footnotesize\ttfamily void Account\+::add\+Funds (\begin{DoxyParamCaption}\item[{\textbf{ Payment}}]{fund }\end{DoxyParamCaption})}
+
+
+
+Adds funds to the account. 
+
+Adds the given funds to the incomes list and updates the account balance accordingly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fund} & The \doxyref{Payment}{p.}{class_payment} object representing the funds to be added. \\
+\hline
+\end{DoxyParams}
+\label{class_account_a5102b16979d7d94fc18030136617bb6e} 
+\index{Account@{Account}!addMonthlyPays@{addMonthlyPays}}
+\index{addMonthlyPays@{addMonthlyPays}!Account@{Account}}
+\doxysubsubsection{addMonthlyPays()}
+{\footnotesize\ttfamily void Account\+::add\+Monthly\+Pays (\begin{DoxyParamCaption}\item[{\textbf{ Payment}}]{monthly\+\_\+payments }\end{DoxyParamCaption})}
+
+
+
+Adds a monthly payment to the account. 
+
+Checks if the monthly payment already exists in the monthly\+\_\+pays list, and if not, adds it to the list and deducts the payment amount from the balance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em monthly\+\_\+payments} & The monthly \doxyref{Payment}{p.}{class_payment} object to be added. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Throws} & an exception if the monthly payment already exists. \\
+\hline
+\end{DoxyExceptions}
+\label{class_account_a0d584a90e61f84114ff569e1d2e3c9ab} 
+\index{Account@{Account}!addPartOwner@{addPartOwner}}
+\index{addPartOwner@{addPartOwner}!Account@{Account}}
+\doxysubsubsection{addPartOwner()}
+{\footnotesize\ttfamily void Account\+::add\+Part\+Owner (\begin{DoxyParamCaption}\item[{\textbf{ Owner}}]{part\+\_\+owner }\end{DoxyParamCaption})}
+
+
+
+Adds a part owner to the account. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+\_\+owner} & The part owner to add. \\
+\hline
+\end{DoxyParams}
+\label{class_account_abf85048ee89922499689e2e15a64e769} 
+\index{Account@{Account}!addPayment@{addPayment}}
+\index{addPayment@{addPayment}!Account@{Account}}
+\doxysubsubsection{addPayment()}
+{\footnotesize\ttfamily void Account\+::add\+Payment (\begin{DoxyParamCaption}\item[{\textbf{ Payment}}]{pay }\end{DoxyParamCaption})}
+
+
+
+Adds a payment to the account. 
+
+Checks if the payment already exists in the payments list, and if not, adds it to the list and deducts the payment amount from the balance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pay} & The \doxyref{Payment}{p.}{class_payment} object to be added. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Throws} & an exception if the payment already exists. \\
+\hline
+\end{DoxyExceptions}
+\label{class_account_a0cd9f0c86d4178fd5303fd83adb6a9ba} 
+\index{Account@{Account}!addTargetFund@{addTargetFund}}
+\index{addTargetFund@{addTargetFund}!Account@{Account}}
+\doxysubsubsection{addTargetFund()}
+{\footnotesize\ttfamily void Account\+::add\+Target\+Fund (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{double}]{Amount }\end{DoxyParamCaption})}
+
+
+
+Adds funds to a target. 
+
+Adds funds to a specific target.
+
+Searches for the target with the given name and adds the specified amount to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the target fund. \\
+\hline
+{\em Amount} & The amount to be added to the target fund. \\
+\hline
+\end{DoxyParams}
+\label{class_account_a647728e4d5c12b9025178c0ebe2538fc} 
+\index{Account@{Account}!addTargets@{addTargets}}
+\index{addTargets@{addTargets}!Account@{Account}}
+\doxysubsubsection{addTargets()}
+{\footnotesize\ttfamily void Account\+::add\+Targets (\begin{DoxyParamCaption}\item[{\textbf{ Target}}]{target }\end{DoxyParamCaption})}
+
+
+
+Adds a target to the account. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The target to add. \\
+\hline
+\end{DoxyParams}
+\label{class_account_a61af316df3a010d1ab9fe353a6f341f7} 
+\index{Account@{Account}!calculateTotalExpenses@{calculateTotalExpenses}}
+\index{calculateTotalExpenses@{calculateTotalExpenses}!Account@{Account}}
+\doxysubsubsection{calculateTotalExpenses()}
+{\footnotesize\ttfamily double Account\+::calculate\+Total\+Expenses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates total expenses. 
+
+Calculates the total expenses in the account.
+
+This function iterates through all payments associated with the account and sums up the amounts of payments categorized as expenses.
+
+\begin{DoxyReturn}{Returns}
+The total expenses in the account. 
+\end{DoxyReturn}
+\label{class_account_aff9c9ad39a6c6c0b4726c43306de5535} 
+\index{Account@{Account}!calculateTotalIncome@{calculateTotalIncome}}
+\index{calculateTotalIncome@{calculateTotalIncome}!Account@{Account}}
+\doxysubsubsection{calculateTotalIncome()}
+{\footnotesize\ttfamily double Account\+::calculate\+Total\+Income (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates total income. 
+
+Calculates the total income in the account.
+
+This function iterates through all payments associated with the account and sums up the amounts of payments categorized as income.
+
+\begin{DoxyReturn}{Returns}
+The total income in the account. 
+\end{DoxyReturn}
+\label{class_account_acd5ac0fcbd7e9be4ff200c862380e77f} 
+\index{Account@{Account}!generateSpendingHabitsReport@{generateSpendingHabitsReport}}
+\index{generateSpendingHabitsReport@{generateSpendingHabitsReport}!Account@{Account}}
+\doxysubsubsection{generateSpendingHabitsReport()}
+{\footnotesize\ttfamily void Account\+::generate\+Spending\+Habits\+Report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates spending habits report. 
+
+Generates a spending habits report for the account.
+
+This function generates a report detailing the spending habits of the account. It prints the total expenses, total income, and completion percentage for each target. \label{class_account_a6ffa3bca3e0c302efe3f13d0d5101faa} 
+\index{Account@{Account}!generateSpendingHabitsReportJson@{generateSpendingHabitsReportJson}}
+\index{generateSpendingHabitsReportJson@{generateSpendingHabitsReportJson}!Account@{Account}}
+\doxysubsubsection{generateSpendingHabitsReportJson()}
+{\footnotesize\ttfamily std\+::string Account\+::generate\+Spending\+Habits\+Report\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates spending habits report in JSON format. 
+
+Generates a spending habits report in JSON format for the account.
+
+This function generates a spending habits report in JSON format, including information such as total expenses, total income, and completion percentage for each target.
+
+\begin{DoxyReturn}{Returns}
+A string containing the spending habits report in JSON format. 
+\end{DoxyReturn}
+\label{class_account_a7da040c2d8e643f8acf6dc154bc5ec2f} 
+\index{Account@{Account}!getAccountNumber@{getAccountNumber}}
+\index{getAccountNumber@{getAccountNumber}!Account@{Account}}
+\doxysubsubsection{getAccountNumber()}
+{\footnotesize\ttfamily int Account\+::get\+Account\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the account number. 
+
+Gets the account number.
+
+\begin{DoxyReturn}{Returns}
+int The account number. 
+\end{DoxyReturn}
+\label{class_account_a7d2d7024203a9b12ca8bde53b269ad21} 
+\index{Account@{Account}!getBalance@{getBalance}}
+\index{getBalance@{getBalance}!Account@{Account}}
+\doxysubsubsection{getBalance()}
+{\footnotesize\ttfamily double Account\+::get\+Balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the account balance. 
+
+Gets the current balance of the account.
+
+\begin{DoxyReturn}{Returns}
+double The current balance. 
+\end{DoxyReturn}
+\label{class_account_a5e154bef4a4a5af173dd07d6ad3a59c1} 
+\index{Account@{Account}!getDateOfAssebly@{getDateOfAssebly}}
+\index{getDateOfAssebly@{getDateOfAssebly}!Account@{Account}}
+\doxysubsubsection{getDateOfAssebly()}
+{\footnotesize\ttfamily \textbf{ Date} Account\+::get\+Date\+Of\+Assebly (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the date of account assembly. 
+
+Gets the date of assembly of the account.
+
+\begin{DoxyReturn}{Returns}
+\doxyref{Date}{p.}{class_date} The date of assembly. 
+\end{DoxyReturn}
+\label{class_account_a45f70535517d234e6e1bc7ae53b34c5d} 
+\index{Account@{Account}!getIncomes@{getIncomes}}
+\index{getIncomes@{getIncomes}!Account@{Account}}
+\doxysubsubsection{getIncomes()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Payment} $>$ Account\+::get\+Incomes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the incomes. 
+
+Gets the list of incomes associated with the account.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Payment$>$ The list of incomes. 
+\end{DoxyReturn}
+\label{class_account_a2bf742cd602c3317ea38047ec09d0eb4} 
+\index{Account@{Account}!getMontlyPays@{getMontlyPays}}
+\index{getMontlyPays@{getMontlyPays}!Account@{Account}}
+\doxysubsubsection{getMontlyPays()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Payment} $>$ Account\+::get\+Montly\+Pays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the monthly payments. 
+
+Gets the list of monthly payments associated with the account.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Payment$>$ The list of monthly payments. 
+\end{DoxyReturn}
+\label{class_account_ab877cf05f60d5baf7c18b80b1f969ef2} 
+\index{Account@{Account}!getOwner@{getOwner}}
+\index{getOwner@{getOwner}!Account@{Account}}
+\doxysubsubsection{getOwner()}
+{\footnotesize\ttfamily \textbf{ Owner} Account\+::get\+Owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the account owner. 
+
+Gets the primary owner of the account.
+
+\begin{DoxyReturn}{Returns}
+\doxyref{Owner}{p.}{class_owner} The primary owner. 
+\end{DoxyReturn}
+\label{class_account_a26a67e6b4ef1c6165a4748ccb241fc3f} 
+\index{Account@{Account}!getPartOwners@{getPartOwners}}
+\index{getPartOwners@{getPartOwners}!Account@{Account}}
+\doxysubsubsection{getPartOwners()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Owner} $>$ Account\+::get\+Part\+Owners (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the part owners. 
+
+Gets the list of part owners associated with the account.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Owner$>$ The list of part owners. 
+\end{DoxyReturn}
+\label{class_account_a0d6ed2ebc7c43f3903a333daafe5ea2d} 
+\index{Account@{Account}!getPayments@{getPayments}}
+\index{getPayments@{getPayments}!Account@{Account}}
+\doxysubsubsection{getPayments()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Payment} $>$ Account\+::get\+Payments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the payments. 
+
+Gets the list of payments associated with the account.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Payment$>$ The list of payments. 
+\end{DoxyReturn}
+\label{class_account_ac2fb0b80ee2346cb55aaffbd05c0ab04} 
+\index{Account@{Account}!getTargets@{getTargets}}
+\index{getTargets@{getTargets}!Account@{Account}}
+\doxysubsubsection{getTargets()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Target} $>$ Account\+::get\+Targets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the targets. 
+
+Gets the list of targets associated with the account.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Target$>$ The list of targets. 
+\end{DoxyReturn}
+\label{class_account_a1d4b354057bf088bb0f0efc81b195a63} 
+\index{Account@{Account}!monthsToTarget@{monthsToTarget}}
+\index{monthsToTarget@{monthsToTarget}!Account@{Account}}
+\doxysubsubsection{monthsToTarget()}
+{\footnotesize\ttfamily void Account\+::months\+To\+Target (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::pair$<$ int, bool $>$ $>$ $>$ \&}]{months\+Remaining,  }\item[{const std\+::string \&}]{target\+Name }\end{DoxyParamCaption})}
+
+
+
+Calculates months remaining to reach a target. 
+
+Calculates the remaining months needed to reach the target amount for a specific target, and whether the target will be reached within that time frame.
+
+
+\begin{DoxyParams}{Parameters}
+{\em months\+Remaining} & A vector to store pairs of target names and their remaining months needed to reach the target, along with a flag indicating whether the target will be reached. \\
+\hline
+{\em target\+Name} & The name of the target for which the calculation is performed. \\
+\hline
+\end{DoxyParams}
+\label{class_account_aff05058c5b97674e8cf2c709b3f3e3a0} 
+\index{Account@{Account}!numberOfIncomes@{numberOfIncomes}}
+\index{numberOfIncomes@{numberOfIncomes}!Account@{Account}}
+\doxysubsubsection{numberOfIncomes()}
+{\footnotesize\ttfamily int Account\+::number\+Of\+Incomes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the number of incomes. 
+
+Gets the number of incomes associated with the account.
+
+\begin{DoxyReturn}{Returns}
+int The number of incomes. 
+\end{DoxyReturn}
+\label{class_account_af7275cb694bb9a558e9265db4836876b} 
+\index{Account@{Account}!numberOfMonthlyPayments@{numberOfMonthlyPayments}}
+\index{numberOfMonthlyPayments@{numberOfMonthlyPayments}!Account@{Account}}
+\doxysubsubsection{numberOfMonthlyPayments()}
+{\footnotesize\ttfamily int Account\+::number\+Of\+Monthly\+Payments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the number of monthly payments. 
+
+Gets the number of monthly payments associated with the account.
+
+\begin{DoxyReturn}{Returns}
+int The number of monthly payments. 
+\end{DoxyReturn}
+\label{class_account_a689c0ca304a21c2b86384cbe32dcd503} 
+\index{Account@{Account}!numberOfPartOwners@{numberOfPartOwners}}
+\index{numberOfPartOwners@{numberOfPartOwners}!Account@{Account}}
+\doxysubsubsection{numberOfPartOwners()}
+{\footnotesize\ttfamily int Account\+::number\+Of\+Part\+Owners (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the number of part owners. 
+
+Gets the number of part owners associated with the account.
+
+\begin{DoxyReturn}{Returns}
+int The number of part owners. 
+\end{DoxyReturn}
+\label{class_account_a84126c3c19ec272a530e1f7ec7e92e24} 
+\index{Account@{Account}!numberOfPayments@{numberOfPayments}}
+\index{numberOfPayments@{numberOfPayments}!Account@{Account}}
+\doxysubsubsection{numberOfPayments()}
+{\footnotesize\ttfamily int Account\+::number\+Of\+Payments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the number of payments. 
+
+Gets the number of payments associated with the account.
+
+\begin{DoxyReturn}{Returns}
+int The number of payments. 
+\end{DoxyReturn}
+\label{class_account_a6a71dd4b697d4fa22cadf540904c4e56} 
+\index{Account@{Account}!numberOfTargets@{numberOfTargets}}
+\index{numberOfTargets@{numberOfTargets}!Account@{Account}}
+\doxysubsubsection{numberOfTargets()}
+{\footnotesize\ttfamily int Account\+::number\+Of\+Targets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for the number of targets. 
+
+Gets the number of targets associated with the account.
+
+\begin{DoxyReturn}{Returns}
+int The number of targets. 
+\end{DoxyReturn}
+\label{class_account_a920916d34a00908ca63119eb34368682} 
+\index{Account@{Account}!prettyPrintAccount@{prettyPrintAccount}}
+\index{prettyPrintAccount@{prettyPrintAccount}!Account@{Account}}
+\doxysubsubsection{prettyPrintAccount()}
+{\footnotesize\ttfamily void Account\+::pretty\+Print\+Account (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints account details in a formatted manner. 
+
+Prints the details of the account including account number, owner, date of assembly, balance, targets, monthly pays, incomes, and payments. \label{class_account_ac91fde63b05d726ef74e20228115efd3} 
+\index{Account@{Account}!printIncomes@{printIncomes}}
+\index{printIncomes@{printIncomes}!Account@{Account}}
+\doxysubsubsection{printIncomes()}
+{\footnotesize\ttfamily void Account\+::print\+Incomes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints all incomes. 
+
+Prints each income in the incomes list to the standard output. \label{class_account_af27fc247a2278e5194570538f7125ffe} 
+\index{Account@{Account}!printInformationAccount@{printInformationAccount}}
+\index{printInformationAccount@{printInformationAccount}!Account@{Account}}
+\doxysubsubsection{printInformationAccount()}
+{\footnotesize\ttfamily void Account\+::print\+Information\+Account (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints account information. 
+
+Print the information of the account.
+
+This function prints the account number, owner, assembly date, and balance of the account to the standard output.
+
+\begin{DoxyNote}{Note}
+This function assumes that the appropriate getters (\doxyref{get\+Account\+Number()}{p.}{class_account_a7da040c2d8e643f8acf6dc154bc5ec2f}, \doxyref{get\+Owner()}{p.}{class_account_ab877cf05f60d5baf7c18b80b1f969ef2}, \doxyref{get\+Date\+Of\+Assebly()}{p.}{class_account_a5e154bef4a4a5af173dd07d6ad3a59c1}, and \doxyref{get\+Balance()}{p.}{class_account_a7d2d7024203a9b12ca8bde53b269ad21}) are defined in the \doxyref{Account}{p.}{class_account} class.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxyref{Account}{p.}{class_account} 
+\end{DoxySeeAlso}
+\label{class_account_a9bf46da0e0f89bf00ad12c00840981ec} 
+\index{Account@{Account}!printMonthly@{printMonthly}}
+\index{printMonthly@{printMonthly}!Account@{Account}}
+\doxysubsubsection{printMonthly()}
+{\footnotesize\ttfamily void Account\+::print\+Monthly (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints monthly payments. 
+
+Prints all monthly payments.
+
+Prints each monthly payment in the monthly\+\_\+pays list to the standard output. \label{class_account_a1162322a7abfd2b37696a145017e54c3} 
+\index{Account@{Account}!printPartOwners@{printPartOwners}}
+\index{printPartOwners@{printPartOwners}!Account@{Account}}
+\doxysubsubsection{printPartOwners()}
+{\footnotesize\ttfamily void Account\+::print\+Part\+Owners (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints all part owners. 
+
+Prints all partial owners.
+
+Prints each partial owner in the part\+\_\+owners list to the standard output. \label{class_account_a1daa01ebbd510935e85ec34bff5f7e82} 
+\index{Account@{Account}!printPayments@{printPayments}}
+\index{printPayments@{printPayments}!Account@{Account}}
+\doxysubsubsection{printPayments()}
+{\footnotesize\ttfamily void Account\+::print\+Payments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints all payments. 
+
+Prints each payment in the payments list to the standard output. \label{class_account_a62aa8907c9cc13e83280aa736dc9051b} 
+\index{Account@{Account}!printTargets@{printTargets}}
+\index{printTargets@{printTargets}!Account@{Account}}
+\doxysubsubsection{printTargets()}
+{\footnotesize\ttfamily void Account\+::print\+Targets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints all targets. 
+
+Prints all target funds.
+
+Prints each target fund in the targets list to the standard output. \label{class_account_a894c7c88a4a2676038022e7c517e15ab} 
+\index{Account@{Account}!removePartOwner@{removePartOwner}}
+\index{removePartOwner@{removePartOwner}!Account@{Account}}
+\doxysubsubsection{removePartOwner()}
+{\footnotesize\ttfamily void Account\+::remove\+Part\+Owner (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Removes a part owner. 
+
+Removes a partial owner.
+
+Searches for the partial owner with the given name and removes it from the part\+\_\+owners list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the partial owner to be removed. \\
+\hline
+\end{DoxyParams}
+\label{class_account_a54bdedb6037735de84f2b01c6b196727} 
+\index{Account@{Account}!removeTarget@{removeTarget}}
+\index{removeTarget@{removeTarget}!Account@{Account}}
+\doxysubsubsection{removeTarget()}
+{\footnotesize\ttfamily void Account\+::remove\+Target (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Removes a target. 
+
+Removes a target fund.
+
+Searches for the target fund with the given name and removes it from the targets list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the target fund to be removed. \\
+\hline
+\end{DoxyParams}
+\label{class_account_af0665830943babcca139f79329fca279} 
+\index{Account@{Account}!setOwnerAdress@{setOwnerAdress}}
+\index{setOwnerAdress@{setOwnerAdress}!Account@{Account}}
+\doxysubsubsection{setOwnerAdress()}
+{\footnotesize\ttfamily void Account\+::set\+Owner\+Adress (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Adress }\end{DoxyParamCaption})}
+
+
+
+Setter for the owner address. 
+
+Sets the owner\textquotesingle{}s address for the account.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Address} & The new address of the owner. \\
+\hline
+\end{DoxyParams}
+\label{class_account_afa4a50622dd7ac537b335ef997f2895c} 
+\index{Account@{Account}!setOwnerName@{setOwnerName}}
+\index{setOwnerName@{setOwnerName}!Account@{Account}}
+\doxysubsubsection{setOwnerName()}
+{\footnotesize\ttfamily void Account\+::set\+Owner\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Name }\end{DoxyParamCaption})}
+
+
+
+Setter for the owner name. 
+
+Sets the owner\textquotesingle{}s name for the account.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & The new name of the owner. \\
+\hline
+\end{DoxyParams}
+\label{class_account_adf8afb0b1f7c95cf013c4c0012e839a6} 
+\index{Account@{Account}!setOwnerPhone@{setOwnerPhone}}
+\index{setOwnerPhone@{setOwnerPhone}!Account@{Account}}
+\doxysubsubsection{setOwnerPhone()}
+{\footnotesize\ttfamily void Account\+::set\+Owner\+Phone (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Phone }\end{DoxyParamCaption})}
+
+
+
+Setter for the owner phone number. 
+
+Sets the owner\textquotesingle{}s phone number for the account.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Phone} & The new phone number of the owner. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ lib.\+h}\item 
+\textbf{ lib.\+cpp}\end{DoxyCompactItemize}

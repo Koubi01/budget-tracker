@@ -1,0 +1,20 @@
+[
+{
+  "directory": "D:/skola c++/project/build",
+  "command": "E:\\Visual\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -DASIO_STANDALONE -D_CROW_ICD-NOTFOUND -isystem C:/Users/koubi/Documents/GitHub/vcpkg/installed/x64-windows/include  -g -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++20 -Wall -Wextra -pedantic @CMakeFiles\\Budget_tracker.dir\\main2.cpp.obj.modmap -o CMakeFiles\\Budget_tracker.dir\\main2.cpp.obj -c \"D:\\skola c++\\project\\main2.cpp\"",
+  "file": "D:\\skola c++\\project\\main2.cpp",
+  "output": "CMakeFiles\\Budget_tracker.dir\\main2.cpp.obj"
+},
+{
+  "directory": "D:/skola c++/project/build",
+  "command": "E:\\Visual\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -DASIO_STANDALONE -D_CROW_ICD-NOTFOUND -isystem C:/Users/koubi/Documents/GitHub/vcpkg/installed/x64-windows/include  -g -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++20 -Wall -Wextra -pedantic @CMakeFiles\\Budget_tracker.dir\\lib.cpp.obj.modmap -o CMakeFiles\\Budget_tracker.dir\\lib.cpp.obj -c \"D:\\skola c++\\project\\lib.cpp\"",
+  "file": "D:\\skola c++\\project\\lib.cpp",
+  "output": "CMakeFiles\\Budget_tracker.dir\\lib.cpp.obj"
+},
+{
+  "directory": "D:/skola c++/project/build",
+  "command": "E:\\Visual\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -DASIO_STANDALONE -D_CROW_ICD-NOTFOUND -isystem C:/Users/koubi/Documents/GitHub/vcpkg/installed/x64-windows/include  -g -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++20 -Wall -Wextra -pedantic @CMakeFiles\\Budget_tracker.dir\\Huff.cpp.obj.modmap -o CMakeFiles\\Budget_tracker.dir\\Huff.cpp.obj -c \"D:\\skola c++\\project\\Huff.cpp\"",
+  "file": "D:\\skola c++\\project\\Huff.cpp",
+  "output": "CMakeFiles\\Budget_tracker.dir\\Huff.cpp.obj"
+}
+]

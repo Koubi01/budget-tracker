@@ -1,0 +1,213 @@
+\doxysection{Payment Class Reference}
+\label{class_payment}\index{Payment@{Payment}}
+
+
+Represents a financial payment with a name, amount, type, and date.  
+
+
+
+
+{\ttfamily \#include $<$lib.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Payment} (std\+::string name, double a, \textbf{ Payment\+\_\+type} t, \textbf{ Date} dt)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Getter for the payment name. \end{DoxyCompactList}\item 
+double \textbf{ get\+Amount} () const
+\begin{DoxyCompactList}\small\item\em Getter for the payment amount. \end{DoxyCompactList}\item 
+\textbf{ Payment\+\_\+type} \textbf{ get\+Type} () const
+\begin{DoxyCompactList}\small\item\em Getter for the payment type. \end{DoxyCompactList}\item 
+\textbf{ Date} \textbf{ get\+Date} () const
+\begin{DoxyCompactList}\small\item\em Getter for the payment date. \end{DoxyCompactList}\item 
+void \textbf{ set\+Amnt} (double a)
+\begin{DoxyCompactList}\small\item\em Setter for the payment amount. \end{DoxyCompactList}\item 
+void \textbf{ set\+Type} (\textbf{ Payment\+\_\+type} t)
+\begin{DoxyCompactList}\small\item\em Setter for the payment type. \end{DoxyCompactList}\item 
+void \textbf{ set\+Date} (\textbf{ Date} d)
+\begin{DoxyCompactList}\small\item\em Setter for the payment date. \end{DoxyCompactList}\item 
+void \textbf{ set\+Name} (std\+::string n)
+\begin{DoxyCompactList}\small\item\em Setter for the payment name. \end{DoxyCompactList}\item 
+std\+::string \textbf{ to\+String} ()
+\begin{DoxyCompactList}\small\item\em Converts payment data to string format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a financial payment with a name, amount, type, and date. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{class_payment_abe6a194bcea94a4a721e974e829b53f5} 
+\index{Payment@{Payment}!Payment@{Payment}}
+\index{Payment@{Payment}!Payment@{Payment}}
+\doxysubsubsection{Payment()}
+{\footnotesize\ttfamily Payment\+::\+Payment (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{double}]{a,  }\item[{\textbf{ Payment\+\_\+type}}]{t,  }\item[{\textbf{ Date}}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the payment. \\
+\hline
+{\em a} & Amount of the payment. \\
+\hline
+{\em t} & Type of the payment. \\
+\hline
+{\em dt} & \doxyref{Date}{p.}{class_date} of the payment. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_payment_a589cf7d06f7365d5505948bdef033828} 
+\index{Payment@{Payment}!getAmount@{getAmount}}
+\index{getAmount@{getAmount}!Payment@{Payment}}
+\doxysubsubsection{getAmount()}
+{\footnotesize\ttfamily double Payment\+::get\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the payment amount. 
+
+Get the amount of the payment.
+
+\begin{DoxyReturn}{Returns}
+The amount of the payment as a double. 
+\end{DoxyReturn}
+\label{class_payment_a9bd209de03a906da3888ffba3befb5b8} 
+\index{Payment@{Payment}!getDate@{getDate}}
+\index{getDate@{getDate}!Payment@{Payment}}
+\doxysubsubsection{getDate()}
+{\footnotesize\ttfamily \textbf{ Date} Payment\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the payment date. 
+
+Get the date of the payment.
+
+\begin{DoxyReturn}{Returns}
+The date of the payment as a \doxyref{Date}{p.}{class_date} object. 
+\end{DoxyReturn}
+\label{class_payment_a72750e2f261563565febd6ab3ffa2e68} 
+\index{Payment@{Payment}!getName@{getName}}
+\index{getName@{getName}!Payment@{Payment}}
+\doxysubsubsection{getName()}
+{\footnotesize\ttfamily std\+::string Payment\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the payment name. 
+
+Get the name associated with the payment.
+
+\begin{DoxyReturn}{Returns}
+The name of the payment as a string. 
+\end{DoxyReturn}
+\label{class_payment_a025eea446cb70a606820b8252b7d6418} 
+\index{Payment@{Payment}!getType@{getType}}
+\index{getType@{getType}!Payment@{Payment}}
+\doxysubsubsection{getType()}
+{\footnotesize\ttfamily \textbf{ Payment\+\_\+type} Payment\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the payment type. 
+
+Get the type of the payment.
+
+\begin{DoxyReturn}{Returns}
+The type of the payment as a Payment\+\_\+type enum. 
+\end{DoxyReturn}
+\label{class_payment_a215991e8d4f9bb9e29bd2302cfad146b} 
+\index{Payment@{Payment}!setAmnt@{setAmnt}}
+\index{setAmnt@{setAmnt}!Payment@{Payment}}
+\doxysubsubsection{setAmnt()}
+{\footnotesize\ttfamily void Payment\+::set\+Amnt (\begin{DoxyParamCaption}\item[{double}]{a }\end{DoxyParamCaption})}
+
+
+
+Setter for the payment amount. 
+
+Set the amount of the payment.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The amount to set for the payment. \\
+\hline
+\end{DoxyParams}
+\label{class_payment_a39813d775f0dee053fe30d5d008911dd} 
+\index{Payment@{Payment}!setDate@{setDate}}
+\index{setDate@{setDate}!Payment@{Payment}}
+\doxysubsubsection{setDate()}
+{\footnotesize\ttfamily void Payment\+::set\+Date (\begin{DoxyParamCaption}\item[{\textbf{ Date}}]{d }\end{DoxyParamCaption})}
+
+
+
+Setter for the payment date. 
+
+Set the date of the payment.
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & The date to set for the payment. \\
+\hline
+\end{DoxyParams}
+\label{class_payment_a20b5f7987f30a32836f918782a4e6b3e} 
+\index{Payment@{Payment}!setName@{setName}}
+\index{setName@{setName}!Payment@{Payment}}
+\doxysubsubsection{setName()}
+{\footnotesize\ttfamily void Payment\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{n }\end{DoxyParamCaption})}
+
+
+
+Setter for the payment name. 
+
+Set the name associated with the payment.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The name to set for the payment. \\
+\hline
+\end{DoxyParams}
+\label{class_payment_ae691109b8570412d6a535e2269318574} 
+\index{Payment@{Payment}!setType@{setType}}
+\index{setType@{setType}!Payment@{Payment}}
+\doxysubsubsection{setType()}
+{\footnotesize\ttfamily void Payment\+::set\+Type (\begin{DoxyParamCaption}\item[{\textbf{ Payment\+\_\+type}}]{t }\end{DoxyParamCaption})}
+
+
+
+Setter for the payment type. 
+
+Set the type of the payment.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The type to set for the payment. \\
+\hline
+\end{DoxyParams}
+\label{class_payment_ad9cfe853de7d67e23cca6b9b237591ea} 
+\index{Payment@{Payment}!toString@{toString}}
+\index{toString@{toString}!Payment@{Payment}}
+\doxysubsubsection{toString()}
+{\footnotesize\ttfamily std\+::string Payment\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Converts payment data to string format. 
+
+Convert the payment information to a string representation.
+
+\begin{DoxyReturn}{Returns}
+The payment information as a string. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ lib.\+h}\item 
+\textbf{ lib.\+cpp}\end{DoxyCompactItemize}

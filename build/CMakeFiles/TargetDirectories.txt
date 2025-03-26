@@ -1,0 +1,4 @@
+D:/skola c++/project/build/CMakeFiles/Budget_tracker.dir
+D:/skola c++/project/build/CMakeFiles/run.dir
+D:/skola c++/project/build/CMakeFiles/edit_cache.dir
+D:/skola c++/project/build/CMakeFiles/rebuild_cache.dir

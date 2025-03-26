@@ -1,0 +1,15 @@
+# ninja log v5
+10	12092	7382583597346070	CMakeFiles/Budget_tracker.dir/main.cpp.obj	4e02c61477f58bdc
+12096	13074	7382583601749039	Budget_tracker.exe	10b7ee5f826d4def
+100	2111	7370904820356021	CMakeFiles/Budget_tracker.dir/lib.cpp.obj	f8c063424b434945
+2	29	7339445027260326	CMakeFiles/main.dir/main.cpp.obj	88f65911b817e8db
+5	33	7339445027280331	CMakeFiles/main.dir/lib.cpp.obj	2ffe12a0b33937bd
+13	1339	7354100196185263	CMakeFiles/Huff.dir/Com_Des.cpp.obj	fd624cfee337e473
+106	1556	7354100198352746	CMakeFiles/Huff.dir/Huff.cpp.obj	31df5ec13c1a47f3
+1557	1725	7354100199864201	Huff.exe	dd9f6569af86ba84
+104	1634	7368841183546036	CMakeFiles/Budget_tracker.dir/Huff.cpp.obj	4577672088a2f380
+7	1544	7370911041512498	CMakeFiles/Budget_tracker.dir/main3.cpp.obj	6a07c060c700529b
+9	1746	7370911639574276	CMakeFiles/Budget_tracker.dir/main2.cpp.obj	92500c15c2872580
+11	1123	7370864687971992	CMakeFiles/Budget_tracker.dir/main4.cpp.obj	96d401a7c348221e
+9	3263	7405193636788223	CMakeFiles/Budget_tracker.dir/main2.cpp.obj	92500c15c2872580
+3264	4234	7405193640611345	Budget_tracker.exe	b51818fa840c38a3
