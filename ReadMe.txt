@@ -34,7 +34,7 @@ Documentation is in folder name Document both HTML and latex.
 For compilation u need Cmake, in main folder is CMakeFile.txt
 with this file u can compile a whole project.
 
-If u want to use the RestApi I build, u will need a vcpkg (https://vcpkg.io/en/)
+If u want to use the RestApi , u will need a vcpkg (https://vcpkg.io/en/)
 after u install this program u will need thru that program install a Crow Framework (https://crowcpp.org/master/)
 and then u need add a path in CMakeFile 
 

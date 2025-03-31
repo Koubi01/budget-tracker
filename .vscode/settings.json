@@ -87,7 +87,7 @@
         "*.ipp": "cpp"
     },
     "cmake.configureSettings": {
-        "CMAKE_TOOLCHAIN_FILE": "C:/Users/koubi/Documents/GitHub/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "CMAKE_TOOLCHAIN_FILE": "../../GitHub/vcpkg/scripts/buildsystems/vcpkg.cmake",
     },
     "cmake.configureOnOpen":true
 }
