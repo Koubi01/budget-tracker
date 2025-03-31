@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 add_compile_options(-Wall -Wextra -pedantic)
 
-include(C:/Users/koubi/Documents/GitHub/vcpkg/scripts/buildsystems/vcpkg.cmake)
+include(../../vcpkg/scripts/buildsystems/vcpkg.cmake)
 
 add_executable(Budget_tracker main2.cpp lib.cpp Huff.cpp)
 
